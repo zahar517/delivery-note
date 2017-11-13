@@ -1,0 +1,17 @@
+<div id="app" class="note">
+  <h1 class="note__title">Накладная</h1>
+  <div class="note__table">
+    <div class="note__row note-header">
+      <div class="note__name">Наименование</div>
+      <div class="note__count">Количество</div>
+      <div class="note__price">Цена</div>
+      <div class="note__action">Действие</div>
+    </div>
+    <NoteForm @addNoteItem="addNoteItemHandler"/>
+    <NoteList 
+      :items="items" 
+      @removeNoteItem="removeNoteItemHandler"
+    />
+  </div>
+  <div class="note__sum">Итого: {{getSum}}</div>
+</div>

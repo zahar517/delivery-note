@@ -1,0 +1,56 @@
+<div class="note__row">
+  <div class="note__name">
+    <div 
+      @dblclick="startEditElement(item, 'name')" 
+      v-show="!showInput(item, 'name')"
+    >
+      {{item.name}}
+    </div>
+    <input
+      class="note__input"
+      v-show="showInput(item, 'name')"
+      v-note-focus="item === editedItem && 'name' === prop"
+      v-model.trim="item.name" 
+      @blur="doneEditElement(item, 'name')"
+      @keyup.enter="doneEditElement(item, 'name')"
+      @keyup.esc="cancelEditElement(item, 'name')"
+    />
+  </div>
+  <div class="note__count">
+    <div 
+      @dblclick="startEditElement(item, 'count')" 
+      v-show="!showInput(item, 'count')"
+    >
+      {{item.count}}
+    </div>
+    <input
+      class="note__input"    
+      v-show="showInput(item, 'count')"
+      v-note-focus="item === editedItem && 'count' === prop"
+      v-model.number="item.count" 
+      @blur="doneEditElement(item, 'count')"
+      @keyup.enter="doneEditElement(item, 'count')"
+      @keyup.esc="cancelEditElement(item, 'count')"
+    />
+  </div>
+  <div class="note__price">
+    <div 
+      @dblclick="startEditElement(item, 'price')" 
+      v-show="!showInput(item, 'price')"
+    >
+      {{item.price}}
+    </div>
+    <input
+      class="note__input"    
+      v-show="showInput(item, 'price')"
+      v-note-focus="item === editedItem && 'price' === prop"
+      v-model.number="item.price" 
+      @blur="doneEditElement(item, 'price')"
+      @keyup.enter="doneEditElement(item, 'price')"
+      @keyup.esc="cancelEditElement(item, 'price')"
+    />
+  </div>
+  <div class="note__action">
+    <button @click="removeItem(item)">Удалить</button>
+  </div>
+</div>

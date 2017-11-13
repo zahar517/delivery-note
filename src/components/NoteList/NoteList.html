@@ -1,0 +1,8 @@
+<div class="note__content">
+  <NoteListItem 
+    v-for="item in items" 
+    :key="item.id" 
+    :item="item"
+    @removeNoteItem="removeNoteItem"
+  />        
+</div>

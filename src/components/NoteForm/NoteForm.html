@@ -1,0 +1,29 @@
+<form class="note__row note__form" @submit.prevent="submit">
+  <div class="note__name">
+    <input autofocus
+      class="note__input" 
+      v-model.trim="name" 
+      :value="name" 
+      placeholder="Введите название"
+    />  
+  </div>
+  <div class="note__count">
+    <input 
+      class="note__input" 
+      v-model.number="count" 
+      :value="count"
+      placeholder="0"
+    />  
+  </div>
+  <div class="note__price">
+    <input 
+      class="note__input" 
+      v-model.number="price" 
+      :value="price"
+      placeholder="0"
+    />  
+  </div>
+  <div class="note__action">
+    <button type="submit">Добавить</button>
+  </div>
+</form>
