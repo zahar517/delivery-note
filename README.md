@@ -1,18 +1,31 @@
-# Delivery-note
+# Накладная с возможностью инлайн редактирования. Тестовое задание
 
-> A Vue.js project
+Функционал:
+> * Добаление новой позиции
+> * Инлайновое редактирование позиции по двойному щелчку
+> * Любое изменение в таблице приводит к перерасчету итога
+> * Удаление позиции
 
-## Build Setup
+## Технологии
+vue-cli
+Vue.js
 
-``` bash
-# install dependencies
-npm install
+## Старт проекта
 
-# serve with hot reload at localhost:8080
-npm run dev
+##### Склонируйте репозиторий и перейдите в папку проекта
 
-# build for production with minification
-npm run build
+```
+git clone https://github.com/zahar517/delivery-note.git
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+##### Установите модули локально
+
+```
+npm install | yarn install
+```
+
+##### Запустите сборку проекта
+
+```
+npm dev | yarn dev
+```
